@@ -10,7 +10,7 @@ class FrontController extends Controller
     private $currentController;
     private $currentAction;
 
-    private $defaultController = 'product';
+    private $defaultController = 'default';
 
     public function actionIndex()
     {

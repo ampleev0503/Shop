@@ -27,8 +27,6 @@ class UserController extends Controller
         }
 
         echo $this->render("user/registr");
-
-
     }
 
     public function actionLogin() {
@@ -52,6 +50,11 @@ class UserController extends Controller
 
         echo $this->render("user/login", ['errors' => $errors]);
 
+    }
+
+    public function actionLogout() {
+        unset($_SESSION['user']);
+        header("Location: /");
     }
 
 }

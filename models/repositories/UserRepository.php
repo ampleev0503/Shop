@@ -15,7 +15,7 @@ class UserRepository extends Repository
         $sql = "SELECT * FROM {$tableName} WHERE email = :email AND hashpass = :hashPass";
         $user = static::getDb()->queryOne($sql, [':email' => $email, ':hashPass' => $hashPass], static::getEntityClass());
         if ($user) {
-            return $user['id'];
+            return $user->id;
         }
         return false;
     }

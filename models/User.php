@@ -33,4 +33,13 @@ class User extends DataEntity
         header('Location: /user/login');
     }
 
+    public static function isGuest() {
+        if (isset($_SESSION['user'])) {
+            return false;
+        }
+        return true;
+    }
+
+
+
 }

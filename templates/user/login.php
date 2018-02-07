@@ -13,3 +13,5 @@
     <input type="password" name="password" placeholder="Password" required>
     <input type="submit" name="submit" value="Login">
 </form>
+
+<a href="/user/registration"> Регистрация</a>
