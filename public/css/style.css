@@ -2071,8 +2071,13 @@ nav .menu .active-link-menu {
     margin-bottom: 41px;
 }
 
-.all_menu details a:hover {
+.all_menu details .active_category {
     color: #ef5b70;
+}
+
+
+.all_menu details a:hover {
+    color: #000;
 }
 
 .parameters {

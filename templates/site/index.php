@@ -69,7 +69,7 @@
 </section>
 
 <div class="container">
-    <a class="content browse_all_btn" href="product.html">
+    <a class="content browse_all_btn" href="/product">
         <p class="p_browse_all">Browse All Product</p>
         <div class="right_arrow">
             <script src="https://use.fontawesome.com/88465977ad.js"></script>

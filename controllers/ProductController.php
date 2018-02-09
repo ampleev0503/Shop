@@ -6,6 +6,7 @@ namespace app\controllers;
 
 use app\base\App;
 //use app\models\Product;
+use app\models\repositories\CategoryRepository;
 use app\models\repositories\ProductRepository;
 //use app\services\Request;
 
@@ -22,7 +23,21 @@ class ProductController extends Controller
 
 
     public function actionIndex(){
-        $items = (new ProductRepository())->getAll();
-        echo $this->render("product/index", ['items' => $items]);
+        $itemsProduct = (new ProductRepository())->getLimit(9);
+        $itemsCategory = (new CategoryRepository())->getAll();
+        echo $this->render("product/index", ['itemsProduct' => $itemsProduct, 'itemsCategory' => $itemsCategory]);
+    }
+
+    public function actionCategory() {
+        $idCategory = App::call()->request->get('id');
+
+
+        //$itemsProduct = (new ProductRepository())->getLimit(6);
+        $itemsProduct = (new ProductRepository())->getProductsCategory($idCategory);
+        $itemsCategory = (new CategoryRepository())->getAll();
+        echo $this->render("product/index",
+                            ['itemsProduct' => $itemsProduct,
+                             'itemsCategory' => $itemsCategory,
+                             'idCategory' => $idCategory]);
     }
 }

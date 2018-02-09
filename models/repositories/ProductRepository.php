@@ -27,5 +27,14 @@ class ProductRepository extends Repository
         return Product::class;
     }
 
+    public function getProductsCategory($id)
+    {
+        $tableName = static::getTableName();
+        $sql = "SELECT * FROM {$tableName}
+        inner join categories on products.idCategory = categories.id 
+        WHERE products.idCategory = :id";
+        return static::getDb()->queryAll($sql, [':id' => $id], static::getEntityClass());
+    }
+
 
 }

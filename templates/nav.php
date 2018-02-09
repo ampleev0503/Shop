@@ -44,7 +44,7 @@
                             <li><a href="">Jackets/Coats</a></li>
                         </ul>
                         <div class="img_offer">
-                            <img src="img/man.jpg" alt="man">
+                            <img src="../img/man.jpg" alt="man">
                             <p>Super <br> sale!</p>
                         </div>
                     </div>
