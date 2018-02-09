@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use app\models\repositories\ProductRepository;
 use app\helpers\Url;
 
 class Product extends DataEntity
@@ -9,18 +10,20 @@ class Product extends DataEntity
     public $id;
     public $name;
     public $price;
+    public $idCategory;
+    public $description;
+    public $image;
 
-    /**
-     * Product constructor.
-     * @param $id
-     * @param $name
-     * @param $price
-     */
-    public function __construct($id = null, $name = null, $price = null)
+
+
+    public function __construct($id = null, $name = null, $price = null, $idCategory = null, $description = null, $image = null)
     {
         $this->id = $id;
         $this->name = $name;
         $this->price = $price;
+        $this->idCategory = $idCategory;
+        $this->description = $description;
+        $this->image = $image;
     }
 
     public function getUrl()
@@ -33,8 +36,15 @@ class Product extends DataEntity
 
     public function getShortDescription()
     {
-        //return mb_substr($this->description, 0 ,50);
-        return $this->price;
+        return mb_substr($this->description, 0 ,50);
+        //return $this->price;
     }
+
+//    public static function getProducts($count) {
+//
+//        $items = (new ProductRepository())->getLimit($count);
+//
+//        return $items;
+//    }
 
 }

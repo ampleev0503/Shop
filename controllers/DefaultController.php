@@ -16,8 +16,9 @@ class DefaultController extends Controller
 {
 
     public function actionIndex() {
-        $items = (new ProductRepository())->getAll();
-        echo $this->render("product/index", ['items' => $items]);
+        //$products = (new ProductRepository())->getAll();
+        $products = (new ProductRepository())->getLimit(8);
+        echo $this->render("site/index", ['products' => $products]);
     }
 
 }

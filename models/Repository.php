@@ -29,6 +29,14 @@ abstract class Repository
         return static::getDb()->queryAll($sql, [], static::getEntityClass());
     }
 
+    public function getLimit($limit)
+    {
+        $tableName = static::getTableName();
+        $sql = "SELECT * FROM {$tableName} LIMIT :limit";
+        //var_dump($sql);
+        return static::getDb()->queryAll($sql, [':limit' => $limit], static::getEntityClass());
+    }
+
     public function delete(DataEntity $entity)
     {
         $tableName = $this->getTableName();

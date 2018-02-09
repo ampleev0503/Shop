@@ -224,7 +224,7 @@ header .basket {
 }
 
 header .basket_block {
-    background-image: url(img/basket_header.svg);
+    background-image: url(../img/basket_header.svg);
     width: 32px;
     height: 29px;
     position: absolute;
@@ -628,7 +628,7 @@ nav .menu .active-link-menu {
 
 .slider {
     height: 614px;
-    background-image: url(img/Layer24.jpg);
+    background-image: url(../img/Layer24.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-color: #e8e8e8;
@@ -703,19 +703,19 @@ nav .menu .active-link-menu {
 }
 
 .item_1 {
-    background-image: url(img/item1.jpg)
+    background-image: url(../img/item1.jpg)
 }
 
 .item_2 {
-    background-image: url(img/item2.jpg)
+    background-image: url(../img/item2.jpg)
 }
 
 .item_3 {
-    background-image: url(img/item3.jpg)
+    background-image: url(../img/item3.jpg)
 }
 
 .item_4 {
-    background-image: url(img/item4.jpg)
+    background-image: url(../img/item4.jpg)
 }
 
 .white_block_1 {
@@ -882,7 +882,7 @@ nav .menu .active-link-menu {
 .mini_basket {
     width: 25px;
     height: 24px;
-    background-image: url(img/basket_hover_prod.svg);
+    background-image: url(../img/basket_hover_prod.svg);
     margin-left: 8px;
     margin-top: 7px;
     float: left;
@@ -1031,7 +1031,7 @@ nav .menu .active-link-menu {
 
 .offer_for_women {
     float: left;
-    background-image: url(img/Layer38.jpg);
+    background-image: url(../img/Layer38.jpg);
     width: 767px;
     height: 529px;
 }
@@ -1078,7 +1078,7 @@ nav .menu .active-link-menu {
 .and_etc .img_block_1 {
     width: 45px;
     height: 32px;
-    background-image: url(img/deliv.png);
+    background-image: url(../img/deliv.png);
     position: absolute;
     top: 52px;
     left: 36px;
@@ -1087,7 +1087,7 @@ nav .menu .active-link-menu {
 .and_etc .img_block_2 {
     width: 40px;
     height: 40px;
-    background-image: url(img/sales.png);
+    background-image: url(../img/sales.png);
     position: absolute;
     top: 52px;
     left: 36px;
@@ -1096,7 +1096,7 @@ nav .menu .active-link-menu {
 .and_etc .img_block_3 {
     width: 47px;
     height: 35px;
-    background-image: url(img/prince.png);
+    background-image: url(../img/prince.png);
     position: absolute;
     top: 52px;
     left: 36px;
@@ -1130,7 +1130,7 @@ nav .menu .active-link-menu {
     height: 438px;
     /*    min-width: 1600px;*/
     /*    margin-bottom: 100px;*/
-    background-image: url(img/Layer41.jpg);
+    background-image: url(../img/Layer41.jpg);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -1164,7 +1164,7 @@ nav .menu .active-link-menu {
 .review .face {
     width: 83px;
     height: 83px;
-    background-image: url(img/Layer40.png);
+    background-image: url(../img/Layer40.png);
     position: absolute;
     top: 111px;
     left: 230px;
@@ -1952,7 +1952,7 @@ nav .menu .active-link-menu {
 }
 
 .add_info .img_add_info_item_1 {
-    background-image: url(img/deliv.png);
+    background-image: url(../img/deliv.png);
     width: 45px;
     height: 32px;
     position: absolute;
@@ -1960,7 +1960,7 @@ nav .menu .active-link-menu {
 }
 
 .add_info .img_add_info_item_2 {
-    background-image: url(img/sales.png);
+    background-image: url(../img/sales.png);
     width: 40px;
     height: 40px;
     position: absolute;
@@ -1968,7 +1968,7 @@ nav .menu .active-link-menu {
 }
 
 .add_info .img_add_info_item_3 {
-    background-image: url(img/prince.png);
+    background-image: url(../img/prince.png);
     width: 47px;
     height: 35px;
     position: absolute;

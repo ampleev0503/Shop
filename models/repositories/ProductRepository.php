@@ -18,7 +18,7 @@ class ProductRepository extends Repository
 
     public static function getTableName()
     {
-        return 'product';
+        return 'products';
     }
 
     public static function getEntityClass()

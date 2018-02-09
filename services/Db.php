@@ -38,7 +38,8 @@ class Db
             );
 
 			//устанавливаем соответсвующие аттрибуты для возврата данных из бд в виде ассоц массива
-            $this->conn->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC);
+            //$this->conn->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC);
+            $this->conn->setAttribute(\PDO::ATTR_EMULATE_PREPARES, false);
 			
 			//устанавливаем режим ошибок, чтобы ошибки приходили в виде exception
 			//$this->conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
@@ -90,7 +91,10 @@ class Db
 		var_dump($params);
 		echo "<br>";
 		var_dump($sql);
-		echo "<br>";*/
+		echo "<br>";
+        var_dump($class);
+        echo "<br>";*/
+
 		//так как для нашего объекта PDO мы устанавливали аттрибуты для возврата данных в виде ассоц массива, то тут указываем fetchAll() (вернёт массив  
 		// со всеми строками результирующего набора в виде ассоциативных масивов)
         //return $this->query($sql, $params)->fetchAll();
@@ -102,9 +106,9 @@ class Db
     }
 
 
-    public function queryObject($sql, $params, $class) {
-        $smtp = $this->query($sql, $params);
-        $smtp->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, $class);
-        return $smtp->fetch();
-    }
+//    public function queryObject($sql, $params, $class) {
+//        $smtp = $this->query($sql, $params);
+//        $smtp->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, $class);
+//        return $smtp->fetch();
+//    }
 }
