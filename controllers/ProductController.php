@@ -5,20 +5,16 @@ namespace app\controllers;
 
 
 use app\base\App;
-//use app\models\Product;
 use app\models\repositories\CategoryRepository;
 use app\models\repositories\ProductRepository;
-//use app\services\Request;
 
 class ProductController extends Controller
 {
-
-
-
     public function actionCard() {
         $id = App::call()->request->get('id');
         $product = (new ProductRepository())->getOne($id);
-        echo $this->render("product/card", ['product' => $product]);
+        $itemsProduct = (new ProductRepository())->getLimit(4);
+        echo $this->render("product/card", ['product' => $product, 'itemsProduct' => $itemsProduct]);
     }
 
 

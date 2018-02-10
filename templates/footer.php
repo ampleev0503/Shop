@@ -70,9 +70,6 @@
     </div>
 
 </footer>
-
-
-
 </body>
 
 </html>

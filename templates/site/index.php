@@ -12,13 +12,13 @@
 <div class="container">
     <div class="content offers">
         <div class="parent">
-            <a class="item item_1" href="single_page.html">
+            <a class="item item_1" href="/product">
                 <div class="white_block_1">
                     <h2>HOT DEAL</h2>
                     <h1>FOR MEN</h1>
                 </div>
             </a>
-            <a class="item item_2" href="single_page.html">
+            <a class="item item_2" href="/product">
                 <div class="white_block_2">
                     <h2>LUXIROUS & TRENDY</h2>
                     <h1>ACCESORIES</h1>
@@ -26,13 +26,13 @@
             </a>
         </div>
         <div class="parent">
-            <a class="item item_3" href="single_page.html">
+            <a class="item item_3" href="/product">
                 <div class="white_block_3">
                     <h2>30% OFFER</h2>
                     <h1>WOMEN</h1>
                 </div>
             </a>
-            <a class="item item_4" href="single_page.html">
+            <a class="item item_4" href="/product">
                 <div class="white_block_4">
                     <h2>NEW ARRIVALS</h2>
                     <h1>FOR KIDS</h1>

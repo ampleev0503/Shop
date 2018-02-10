@@ -115,17 +115,17 @@
 
                 <?php foreach ($itemsProduct as $product): ?>
                 <div class="block_product">
-                    <a class="wrap_href" href="<?= $product->getUrl() ?>">
+                    <a class="wrap_href add_to_basket" href="<?= $product->getUrl() ?>">
                         <img class="img_product" src="<?= $product->image?>" alt="photo">
                         <div class="product_price">
                             <p class="p_name_product"><?= $product->name?></p>
                             <p class="p_price_product">$<?= $product->price?></p>
                         </div>
                     </a>
-                    <a class="add_to_card" href="#">
+                    <div class="add_to_card" data-id="<?= $product->id?>">
                         <div class="mini_basket"></div>
                         <p class="p_add_to">Add to Cart</p>
-                    </a>
+                    </div>
                     <a class="repost" href="#">
                         <script src="https://use.fontawesome.com/9bcd4327dc.js"></script>
                         <i class="fa fa-retweet" aria-hidden="true"></i>

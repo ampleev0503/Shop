@@ -868,7 +868,9 @@ nav .menu .active-link-menu {
     border-color: #1ff8c7;
 }
 
-.add_to_card:hover {}
+.add_to_card:hover {
+    cursor: pointer;
+}
 
 
 /*

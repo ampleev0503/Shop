@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
+
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script src="../js/addproduct.js"></script>
+
 </head>
 
 <body>
 
 <header>
     <div class="container">
-        <a href="#">
+        <a href="/">
             <img class="logo" src="../img/Group2.jpg" alt="logo">
             <h1>BRAN<span class="last">D</span></h1>
         </a>
@@ -62,9 +66,9 @@
         </a>
 
         <div class="basket_block">
-            <a class="basket" href="#"></a>
+            <a class="basket" href="/basket"></a>
             <div class="ellipse_count">
-                <p>2</p>
+                <p><?= \app\models\Basket::countItems()?></p>
             </div>
 
             <div class="cart_block">

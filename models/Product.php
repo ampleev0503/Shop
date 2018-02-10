@@ -40,11 +40,4 @@ class Product extends DataEntity
         //return $this->price;
     }
 
-//    public static function getProducts($count) {
-//
-//        $items = (new ProductRepository())->getLimit($count);
-//
-//        return $items;
-//    }
-
 }

@@ -36,5 +36,19 @@ class ProductRepository extends Repository
         return static::getDb()->queryAll($sql, [':id' => $id], static::getEntityClass());
     }
 
+    public function getProductsByIds($idsArray) {
+        $tableName = static::getTableName();
+
+        $idsArray = implode(',', $idsArray);
+
+        $sql = "SELECT * FROM {$tableName} WHERE id IN ($idsArray)";
+
+        //var_dump($sql);
+
+        return static::getDb()->queryAll($sql, [], static::getEntityClass());
+
+
+    }
+
 
 }
