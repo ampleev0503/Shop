@@ -83,7 +83,9 @@ abstract class Repository
                 continue;
             }
             $params[":$key"] = $value;
-            $expression[] = "$key = :$key";
+            if ($key !== 'id') {
+                $expression[] = "$key = :$key";
+            }
         }
 
         $expression = implode(", ", $expression);
@@ -91,6 +93,9 @@ abstract class Repository
         $tableName = static::getTableName();
 
         $sql = "UPDATE {$tableName} SET {$expression} WHERE id = :id";
+
+//        var_dump($sql);
+//        var_dump($params);
 
         return static::getDb()->execute($sql, $params);
     }

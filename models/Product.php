@@ -16,7 +16,7 @@ class Product extends DataEntity
 
 
 
-    public function __construct($id = null, $name = null, $price = null, $idCategory = null, $description = null, $image = null)
+    public function __construct($name = null, $price = null, $idCategory = null, $description = null, $image = null, $id = null)
     {
         $this->id = $id;
         $this->name = $name;

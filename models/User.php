@@ -8,6 +8,7 @@ class User extends DataEntity
     public $firstName;
     public $lastName;
     public $hashPass;
+    public $isAdmin;
 
 
     public function __construct($email = null, $firstName = null, $lastName = null, $hashPass = null, $id = null)
