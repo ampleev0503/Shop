@@ -37,7 +37,7 @@
             </div>
             <p class="p_shipping">FREE</p>
             <p class="p_subtotal">$<?= \app\models\Basket::getSubtotalPrice($product->price, $itemsProduct[$product->id])?></p>
-            <a class="delete" href="#">
+            <a class="delete" href="/basket/delete/?id=<?= $product->id?>">
                 <script src="https://use.fontawesome.com/d5b1114ae1.js"></script>
                 <i class="fa fa-times-circle" aria-hidden="true"></i>
             </a>
@@ -82,7 +82,7 @@
                 <h4>GRAND TOTAL <span>$<?= \app\models\Basket::getTotalPrice($productsInBasket)?></span></h4>
             </div>
             <div class="strip"></div>
-            <a class="btn_proc_to_checkout" href="#">
+            <a class="btn_proc_to_checkout" href="/basket/checkout">
                 <p>PROCEED TO CHECKOUT</p>
             </a>
 

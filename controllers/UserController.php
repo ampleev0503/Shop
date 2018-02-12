@@ -22,7 +22,7 @@ class UserController extends Controller
             (new UserRepository())->insert($user);
 
             header('Location: /');
-            exit();
+
 
         }
 
@@ -54,7 +54,7 @@ class UserController extends Controller
 
     public function actionLogout() {
         unset($_SESSION['user']);
-        unset($_SESSION['products']);
+        //unset($_SESSION['products']);
         header("Location: /");
     }
 

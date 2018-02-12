@@ -11,35 +11,35 @@ class Basket extends DataEntity
 
     public static function addProduct($id)
     {
-        // Приводим $id к типу integer
-        $id = intval($id);
 
-        // Пустой массив для товаров в корзине
-        $productsInCart = [];
+            // Приводим $id к типу integer
+            $id = intval($id);
 
-        // Если в корзине уже есть товары (они хранятся в сессии)
-        if (isset($_SESSION['products'])) {
-            // То заполним наш массив товарами
-            $productsInCart = $_SESSION['products'];
-        }
+            // Пустой массив для товаров в корзине
+            $productsInCart = [];
 
-        // Проверяем есть ли уже такой товар в корзине
-        if (array_key_exists($id, $productsInCart)) {
-            // Если такой товар есть в корзине, но был добавлен еще раз, увеличим количество на 1
-            $productsInCart[$id] ++;
-        } else {
-            // Если нет, добавляем id нового товара в корзину с количеством 1
-            $productsInCart[$id] = 1;
-        }
+            // Если в корзине уже есть товары (они хранятся в сессии)
+            if (isset($_SESSION['products'])) {
+                // То заполним наш массив товарами
+                $productsInCart = $_SESSION['products'];
+            }
 
-        // Записываем массив с товарами в сессию
-        $_SESSION['products'] = $productsInCart;
+            // Проверяем есть ли уже такой товар в корзине
+            if (array_key_exists($id, $productsInCart)) {
+                // Если такой товар есть в корзине, но был добавлен еще раз, увеличим количество на 1
+                $productsInCart[$id]++;
+            } else {
+                // Если нет, добавляем id нового товара в корзину с количеством 1
+                $productsInCart[$id] = 1;
+            }
+
+            // Записываем массив с товарами в сессию
+            $_SESSION['products'] = $productsInCart;
 
 
-
-        // Возвращаем количество товаров в корзине
-        return self::countItems();
-    }
+            // Возвращаем количество товаров в корзине
+            return self::countItems();
+   }
 
     /**
      * Подсчет количество товаров в корзине (в сессии)
@@ -88,6 +88,23 @@ class Basket extends DataEntity
         }
 
         return $total;
+    }
+
+    public static function deleteProduct($id) {
+
+        $productsInCart = self::getProducts();
+
+        if ($productsInCart) {
+            unset($productsInCart[$id]);
+            $_SESSION['products'] = $productsInCart;
+        }
+    }
+
+    public static function clear()
+    {
+        if (isset($_SESSION['products'])) {
+            unset($_SESSION['products']);
+        }
     }
 
 }
