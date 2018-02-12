@@ -73,7 +73,7 @@ class AdminProductController extends Controller
 
 
 
-public function actionUpdate() {
+    public function actionUpdate() {
         $userId = User::checkLogged();
 
         $user = (new UserRepository())->getOne($userId);

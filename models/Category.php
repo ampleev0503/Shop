@@ -12,7 +12,7 @@ class Category extends DataEntity
     public $id;
     public $categoryName;
 
-    public function __construct($id = null, $categoryName = null)
+    public function __construct($categoryName = null, $id = null)
     {
         $this->id;
         $this->categoryName = $categoryName;

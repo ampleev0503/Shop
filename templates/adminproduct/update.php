@@ -17,8 +17,8 @@
 
         <br/>
 
-        <div class="col-lg-4">
-            <div class="login-form">
+        <div>
+            <div>
                 <form method="post" enctype="multipart/form-data">
 
                     <p>Название товара</p>

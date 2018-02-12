@@ -1,42 +1,42 @@
 <?php /** @var \app\models\Product[] $itemsProduct */ ?>
 
 <div class="container">
-        <div class="row">
+    <div class="row">
 
-            <br/>
+        <br/>
 
-            <div class="breadcrumbs">
-                <ul class="breadcrumb">
-                    <li><a href="/admin">Админпанель</a></li>
-                    <li>Управление товарами</li>
-                </ul>
-            </div>
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li><a href="/admin">Админпанель</a></li>
+                <li>Управление товарами</li>
+            </ul>
+        </div>
 
-            <a href="/adminproduct/create">Добавить товар</a>
+        <a href="/adminproduct/create">Добавить товар</a>
 
-            <h4>Список товаров</h4>
+        <h4>Список товаров</h4>
 
-            <br/>
+        <br/>
 
-            <table>
+        <table>
+            <tr>
+                <th>ID product</th>
+                <th>Name Product</th>
+                <th>Price</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <?php foreach ($itemsProduct as $product): ?>
                 <tr>
-                    <th>ID product</th>
-                    <th>Name Product</th>
-                    <th>Price</th>
-                    <th></th>
-                    <th></th>
+                    <td><?php echo $product->id; ?></td>
+                    <td><?php echo $product->name; ?></td>
+                    <td><?php echo $product->price ?></td>
+                    <td><a href="/adminproduct/update/?id=<?= $product->id ?>">Редактировать </a></td>
+                    <td></td>
+                    <td><a href="/adminproduct/delete/?id=<?= $product->id ?>">Удалить </a></td>
                 </tr>
-                <?php foreach ($itemsProduct as $product): ?>
-    <tr>
-        <td><?php echo $product->id; ?></td>
-        <td><?php echo $product->name; ?></td>
-        <td><?php echo $product->price ?></td>
-        <td><a href="/adminproduct/update/?id=<?= $product->id ?>">Update Product </a></td>
-        <td></td>
-        <td><a href="/adminproduct/delete/?id=<?= $product->id ?>">Delete Product </a></td>
-    </tr>
-<?php endforeach; ?>
-</table>
+            <?php endforeach; ?>
+        </table>
 
-</div>
+    </div>
 </div>
