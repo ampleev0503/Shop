@@ -1815,6 +1815,10 @@ nav .menu .active-link-menu {
     transition: all 1s;
 }
 
+.women_collection .property .btn_add_to_card:hover {
+    cursor: pointer;
+}
+
 .women_collection .property .btn_add_to_card .img_basket {
     display: block;
     width: 26px;

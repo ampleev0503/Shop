@@ -61,11 +61,11 @@
             <p>QUANTITY</p>
             <input type="text" placeholder="1" class="rectangle">
         </div>
-        <a class="btn_add_to_card" href="#">
+        <div class="btn_add_to_card" data-id="<?= $product->id?>">
             <img class="img_basket" src="../img/basket_red.svg" alt="basket">
             <img class="img_basket_hover" src="../img/basket_white.svg" alt="basket">
             <p>Add to Cart</p>
-        </a>
+        </div>
     </div>
 
 
