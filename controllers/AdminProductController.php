@@ -57,9 +57,21 @@ class AdminProductController extends Controller
         if ($user->isAdmin == 1) {
             if (isset($_POST['submit'])) {
 
+
+                $path = null;
+                // Проверим, загружалось ли через форму изображение
+                if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
+                    // Если загружалось, переместим его в нужную папке, дадим новое имя
+                    move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/img/{$_FILES["image"]["name"]}");
+                    $path = "../img/{$_FILES["image"]["name"]}";
+                }
+
+
                 $product = new Product($_POST['name'], $_POST['price'], $_POST['category_id'], $_POST['description']);
+                $product->image = $path;
                 (new ProductRepository())->insert($product);
 
+                //var_dump($_FILES['image']);
                 header("Location: /adminproduct");
             }
 
