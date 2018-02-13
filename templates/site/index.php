@@ -57,10 +57,10 @@
                         <p class="p_price_product">$<?= $product->price?></p>
                     </div>
                 </a>
-                <a class="add_to_card" href="#">
+                <div class="add_to_card" data-id="<?= $product->id?>">
                     <div class="mini_basket"></div>
                     <p class="p_add_to">Add to Cart</p>
-                </a>
+                </div>
             </div>
             <?php endforeach; ?>
 
