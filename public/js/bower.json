@@ -1,0 +1,20 @@
+{
+  "name": "shop",
+  "homepage": "https://github.com/ampleev0503/Shop",
+  "authors": [
+    "ampleev0503 <ampleev0503@yandex.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-ui": "^1.12.1"
+  }
+}

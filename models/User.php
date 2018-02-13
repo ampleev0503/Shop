@@ -18,6 +18,7 @@ class User extends DataEntity
         $this->firstName = $firstName;
         $this->lastName = $lastName;
         $this->hashPass = $hashPass;
+        $this->isAdmin = 0;
     }
 
     public static function auth($userId) {

@@ -19,6 +19,8 @@ class UserController extends Controller
 
             $user = new User($email, $firstName, $lastName, $hashPass);
 
+            //var_dump($user);
+
             (new UserRepository())->insert($user);
 
             header('Location: /');
