@@ -1,3 +1,4 @@
+
 <?php /** @var \app\models\Product[] $itemsProduct */ ?>
 <?php /** @var \app\models\Category[] $itemsCategory */ ?>
 
@@ -114,85 +115,85 @@
             <div class="products">
 
                 <?php foreach ($itemsProduct as $product): ?>
-                <div class="block_product">
-                    <a class="wrap_href add_to_basket" href="<?= $product->getUrl() ?>">
-                        <img class="img_product" src="<?= $product->image?>" alt="photo">
-                        <div class="product_price">
-                            <p class="p_name_product"><?= $product->name?></p>
-                            <p class="p_price_product">$<?= $product->price?></p>
+                    <div class="block_product">
+                        <a class="wrap_href add_to_basket" href="<?= $product->getUrl() ?>">
+                            <img class="img_product" src="<?= $product->image?>" alt="photo">
+                            <div class="product_price">
+                                <p class="p_name_product"><?= $product->name?></p>
+                                <p class="p_price_product">$<?= $product->price?></p>
+                            </div>
+                        </a>
+                        <div class="add_to_card" data-id="<?= $product->id?>">
+                            <div class="mini_basket"></div>
+                            <p class="p_add_to">Add to Cart</p>
                         </div>
-                    </a>
-                    <div class="add_to_card" data-id="<?= $product->id?>">
-                        <div class="mini_basket"></div>
-                        <p class="p_add_to">Add to Cart</p>
+                        <a class="repost" href="#">
+                            <script src="https://use.fontawesome.com/9bcd4327dc.js"></script>
+                            <i class="fa fa-retweet" aria-hidden="true"></i>
+                        </a>
+                        <a class="love" href="#">
+                            <script src="https://use.fontawesome.com/e36230332b.js"></script>
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </a>
                     </div>
-                    <a class="repost" href="#">
-                        <script src="https://use.fontawesome.com/9bcd4327dc.js"></script>
-                        <i class="fa fa-retweet" aria-hidden="true"></i>
-                    </a>
-                    <a class="love" href="#">
-                        <script src="https://use.fontawesome.com/e36230332b.js"></script>
-                        <i class="fa fa-heart-o" aria-hidden="true"></i>
-                    </a>
-                </div>
                 <?php endforeach; ?>
 
-        </div>
-            <a class="btn_view_all" href="#">
+            </div>
+            <a class="btn_view_all" href="/product/viewAll">
                 <p>View All</p>
             </a>
-    </div>
-</div>
-
-<div class="content_3">
-    <div class="add_info">
-        <div class="add_info_item add_info_item_1">
-            <div class="img_add_info_item_1"></div>
-            <h3>Free Delivery</h3>
-            <p>Worldwide delivery on all. Authorit tively morph next-generation innovation with extensive models.</p>
-        </div>
-        <div class="add_info_item add_info_item_2">
-            <div class="img_add_info_item_2"></div>
-            <h3>Sales & discounts</h3>
-            <p>Worldwide delivery on all. Authorit tively morph next-generation innovation with extensive models.</p>
-        </div>
-        <div class="add_info_item add_info_item_3">
-            <div class="img_add_info_item_3"></div>
-            <h3>Quality assurance</h3>
-            <p>Worldwide delivery on all. Authorit tively morph next-generation innovation with extensive models.</p>
         </div>
     </div>
-</div>
+
+    <div class="content_3">
+        <div class="add_info">
+            <div class="add_info_item add_info_item_1">
+                <div class="img_add_info_item_1"></div>
+                <h3>Free Delivery</h3>
+                <p>Worldwide delivery on all. Authorit tively morph next-generation innovation with extensive models.</p>
+            </div>
+            <div class="add_info_item add_info_item_2">
+                <div class="img_add_info_item_2"></div>
+                <h3>Sales & discounts</h3>
+                <p>Worldwide delivery on all. Authorit tively morph next-generation innovation with extensive models.</p>
+            </div>
+            <div class="add_info_item add_info_item_3">
+                <div class="img_add_info_item_3"></div>
+                <h3>Quality assurance</h3>
+                <p>Worldwide delivery on all. Authorit tively morph next-generation innovation with extensive models.</p>
+            </div>
+        </div>
+    </div>
 
 
-<div class="container">
-    <div class="review">
-        <div class="review_over">
-            <div class="half_1">
-                <figure>
-                    <p class="p_my_review">"Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium"</p>
-                    <figcaption>Bin Burhan</figcaption>
-                </figure>
-                <h6>Dhaka, Bd</h6>
-                <div class="face"></div>
+    <div class="container">
+        <div class="review">
+            <div class="review_over">
+                <div class="half_1">
+                    <figure>
+                        <p class="p_my_review">"Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium"</p>
+                        <figcaption>Bin Burhan</figcaption>
+                    </figure>
+                    <h6>Dhaka, Bd</h6>
+                    <div class="face"></div>
 
 
 
-                <div class="navigation">
-                    <a class="block" href="#"></a>
-                    <a class="block active" href="#"></a>
-                    <a class="block" href="#"></a>
+                    <div class="navigation">
+                        <a class="block" href="#"></a>
+                        <a class="block active" href="#"></a>
+                        <a class="block" href="#"></a>
+                    </div>
+                </div>
+
+                <div class="half_2">
+                    <h3 class="h3_subscribe">SUBSCRIBE</h3>
+                    <h4 class="h4_subscribe">FOR OUR NEWLETTER AND PROMOTION</h4>
+                    <form action="#">
+                        <input type="email" placeholder="Enter Your Email">
+                        <input type="submit" value="Subscribe">
+                    </form>
                 </div>
             </div>
-
-            <div class="half_2">
-                <h3 class="h3_subscribe">SUBSCRIBE</h3>
-                <h4 class="h4_subscribe">FOR OUR NEWLETTER AND PROMOTION</h4>
-                <form action="#">
-                    <input type="email" placeholder="Enter Your Email">
-                    <input type="submit" value="Subscribe">
-                </form>
-            </div>
         </div>
     </div>
-</div>

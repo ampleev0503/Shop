@@ -41,8 +41,9 @@
 
                     <br/><br/>
 
-                    <!--                    <p>Изображение товара</p>-->
-                    <!--                    <input type="file" name="image" placeholder="" value="">-->
+                    <p>Изображение товара</p>
+                    <img src="<?= $product->image ?>" width="200" alt="" />
+                    <input type="file" name="image" placeholder="" value="">
 
                     <p>Детальное описание</p>
                     <textarea name="description"><?= $product->description?></textarea>

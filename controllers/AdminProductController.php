@@ -63,7 +63,7 @@ class AdminProductController extends Controller
                 if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
                     // Если загружалось, переместим его в нужную папке, дадим новое имя
                     move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/img/{$_FILES["image"]["name"]}");
-                    $path = "../img/{$_FILES["image"]["name"]}";
+                    $path = "/img/{$_FILES["image"]["name"]}";
                 }
 
 
@@ -101,7 +101,16 @@ class AdminProductController extends Controller
                 $product->price = $_POST['price'];
                 $product->idCategory = $_POST['category_id'];
                 $product->description = $_POST['description'];
-                //var_dump($product);
+
+                // Проверим, загружалось ли через форму изображение
+                if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
+                    // Если загружалось, переместим его в нужную папке, дадим новое имя
+                    move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/img/{$_FILES["image"]["name"]}");
+                    $path = "/img/{$_FILES["image"]["name"]}";
+                    $product->image = $path;
+                }
+
+
                 (new ProductRepository())->update($product);
 
                 header("Location: /adminproduct");

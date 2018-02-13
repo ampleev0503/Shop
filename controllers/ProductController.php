@@ -24,6 +24,12 @@ class ProductController extends Controller
         echo $this->render("product/index", ['itemsProduct' => $itemsProduct, 'itemsCategory' => $itemsCategory]);
     }
 
+    public function actionViewAll(){
+        $itemsProduct = (new ProductRepository())->getAll();
+        $itemsCategory = (new CategoryRepository())->getAll();
+        echo $this->render("product/index", ['itemsProduct' => $itemsProduct, 'itemsCategory' => $itemsCategory]);
+    }
+
     public function actionCategory() {
         $idCategory = App::call()->request->get('id');
 
