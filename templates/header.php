@@ -8,6 +8,7 @@
 
     <script src="../js/jquery-3.2.1.js"></script>
     <script src="../js/addproduct.js"></script>
+    <script src="../js/slider.js"></script>
 
 </head>
 

@@ -1567,6 +1567,11 @@ nav .menu .active-link-menu {
     margin-top: -365px;
 }
 
+.single_slider .block_next:hover,
+.single_slider .block_prev:hover {
+    cursor: pointer;
+}
+
 .single_slider i {
     color: #ffffff;
     font-size: 22px;

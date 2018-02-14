@@ -15,15 +15,26 @@
 
 <div class="single_slider">
     <div class="container">
-        <img class="img_single_slider" src="../img/Layer42.jpg" alt="">
-        <a class="block_prev" href="#">
+        <div class="slide">
+            <img class="img_single_slider" src="../img/Layer42.jpg" alt="">
+        </div>
+
+        <div class="slide active_slide">
+            <img class="img_single_slider" src="../img/Layer42.jpg" alt="">
+        </div>
+
+        <div class="slide">
+            <img class="img_single_slider" src="../img/Layer42.jpg" alt="">
+        </div>
+
+        <div id="btnLeft" class="block_prev" href="#">
             <script src="https://use.fontawesome.com/eaf0c42a4f.js"></script>
             <i class="fa fa-angle-left" aria-hidden="true"></i>
-        </a>
-        <a class="block_next" href="#">
+        </div>
+        <div id="btnRight" class="block_next" href="#">
             <script src="https://use.fontawesome.com/f228fe352f.js"></script>
             <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        </div>
     </div>
 </div>
 
