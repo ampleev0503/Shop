@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use app\interfaces\IComparator;
 use app\models\repositories\ProductRepository;
 use app\helpers\Url;
 
@@ -38,6 +39,12 @@ class Product extends DataEntity
     {
         return mb_substr($this->description, 0 ,50);
         //return $this->price;
+    }
+
+    /** @var \app\models\Product[] $products */
+    public static function sortProducts(IComparator $comparator, $products)
+    {
+        return $comparator->compare($products);
     }
 
 }

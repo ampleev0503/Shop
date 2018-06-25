@@ -5,6 +5,9 @@ namespace app\controllers;
 
 
 use app\base\App;
+use app\helpers\strategy\PriceDescComparator;
+use app\helpers\strategy\PriceAscComparator;
+use app\models\Product;
 use app\models\repositories\CategoryRepository;
 use app\models\repositories\ProductRepository;
 
@@ -25,7 +28,11 @@ class ProductController extends Controller
     }
 
     public function actionViewAll(){
-        $itemsProduct = (new ProductRepository())->getAll();
+        $collectionsProduct = (new ProductRepository())->getAll();
+
+          // по умолчанию сортируем товары по возрастанию цены
+        $itemsProduct = Product::sortProducts(new PriceAscComparator(), $collectionsProduct);
+
         $itemsCategory = (new CategoryRepository())->getAll();
         echo $this->render("product/index", ['itemsProduct' => $itemsProduct, 'itemsCategory' => $itemsCategory]);
     }
