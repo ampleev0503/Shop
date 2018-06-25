@@ -53,7 +53,7 @@ abstract class Controller
 
     public function renderTemplate($template, $params = []) {
 
-        //здесь уже вызывается метод render($template, $params) из классов шаблона рендеринга (папка renderers)
+        //здесь уже вызывается метод render($template, $params) из классов шаблона рендеринга (папка services/renderers)
         return $this->renderer->render($template, $params);
     }
 
