@@ -3,6 +3,7 @@
 namespace app\models;
 
 use app\interfaces\IComparator;
+use app\models\builder\ProductBuilder;
 use app\models\repositories\ProductRepository;
 use app\helpers\Url;
 
@@ -16,15 +17,15 @@ class Product extends DataEntity
     public $image;
 
 
-
-    public function __construct($name = null, $price = null, $idCategory = null, $description = null, $image = null, $id = null)
+    /** @var \app\models\builder\ProductBuilder $productBuilder*/
+    public function __construct(ProductBuilder $productBuilder)
     {
-        $this->id = $id;
-        $this->name = $name;
-        $this->price = $price;
-        $this->idCategory = $idCategory;
-        $this->description = $description;
-        $this->image = $image;
+        $this->id = $productBuilder->getId();
+        $this->name = $productBuilder->getName();
+        $this->price = $productBuilder->getPrice();
+        $this->idCategory = $productBuilder->getIdCategory();
+        $this->description = $productBuilder->getDescription();
+        $this->image = $productBuilder->getImage();
     }
 
     public function getUrl()

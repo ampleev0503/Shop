@@ -2,6 +2,7 @@
 namespace app\controllers;
 
 use app\base\App;
+use app\models\builder\ProductBuilder;
 use app\models\Product;
 use app\models\repositories\CategoryRepository;
 use app\models\repositories\UserRepository;
@@ -66,9 +67,15 @@ class AdminProductController extends Controller
                     $path = "/img/{$_FILES["image"]["name"]}";
                 }
 
+                $productBuilder = new ProductBuilder();
+                $productBuilder->setName($_POST['name']);
+                $productBuilder->setPrice($_POST['price']);
+                $productBuilder->setIdCategory($_POST['category_id']);
+                $productBuilder->setDescription($_POST['description']);
+                $productBuilder->setImage($path);
 
-                $product = new Product($_POST['name'], $_POST['price'], $_POST['category_id'], $_POST['description']);
-                $product->image = $path;
+                $product = $productBuilder->build();
+
                 (new ProductRepository())->insert($product);
 
                 //var_dump($_FILES['image']);
